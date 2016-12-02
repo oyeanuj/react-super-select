@@ -58,7 +58,7 @@ class ReactSuperSelect extends React.Component {
       ajaxError: false,
 
       // **controlId** (String) - A unique identifier for the rss control. This value is used to generate aria accessibility labels
-      controlId: _.uniqueId('rss_'),
+      controlId: this.props.id || _.uniqueId('rss_'),
 
       // **data** (Array of Objects) the active dataSource collection used to map to option elements, with any search filtering results reflected
       data: this._configureDataSource(this.props.dataSource),
